@@ -182,22 +182,23 @@ public class Islemler {
     }
 
     private static void ekle() {//hem ogrenci hem ogretmen icin tasarlandi
-        System.out.println("******* "+kisiTuru+" ekleme sayfasina hos geldiniz");
-        System.out.println("isim soyisim giriniz");
-        String adSoyad= scan.nextLine();
+        System.out.println("**** " + kisiTuru + " ekleme sayfasina hosgeldin");
+        System.out.println("isim soyisim gir");
         scan.nextLine();
-        System.out.println("kimlik giriniz");
-        String kimlikNo=scan.nextLine();
-        scan.nextLine();
-        System.out.println("yas giriniz");
-        int yas=scan.nextInt();
+        String adSoyad = scan.nextLine();
+        System.out.println("kimlik gir");
+        String kimlikNo = scan.nextLine();
+        System.out.println("yas gir");
+        int yas = scan.nextInt();
+        String ogrenciNo;
+        String sinif;
 
         if (kisiTuru.equals("OGRENCI")){
             System.out.println("ogrenci no gir");
-            String ogrenciNo= scan.next().replaceAll(" ","");
+            ogrenciNo= scan.next().replaceAll(" ","");
 
             System.out.println("sinif gir");
-            String sinif= scan.next().replaceAll(" ","");
+            sinif= scan.next().replaceAll(" ","");
             Ogrenci ogrenci=new Ogrenci(adSoyad,kimlikNo,yas,ogrenciNo,sinif);
             ogrncList.add(ogrenci);
 
